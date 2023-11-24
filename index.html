@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="author" content="Letícia Puertas de Carvalho">
+    <title>Web CRUD</title>
+
+    <!-- Minha fonte - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Inlusão do Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Inclusão do Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="css/euphoria.css">
+</head>
+
+<body>
+    <header>
+        <!-- Construção da barra de navegação -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-crud">
+            <section class="container py-0">
+                <a href="" class="navbar-brand">
+                    <i class="bi bi-cookie"></i>
+                    <span class="px-3">Doces</span>
+                </a>
+
+                <!-- Definição do botão do menu hamburguer -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                    aria-current="navbar" aria-controls="navbar-items" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-menu-button-wide"></i>
+                </button>
+
+                <!-- Definindo os itens do menu -->
+                <section class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                        <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Operações CRUD</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Contato</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="container" id="container-banner">
+            <section class="row">
+
+                <section class="col-12 col-lg-6">
+                    <section class="container">
+
+                        <section class="row g-2 mt-2 mb-0">
+                            <!-- Primeiro card -->
+                            <section class="col-12 col-lg-6">
+                                <section class="card">
+                                    <section class="card-body bg-crud">
+                                        <i class="bi bi-plus-circle-fill "></i>
+                                        <h5 class="card-title titulo">Create - Post</h5>
+                                        <p class="card-text">Inclusão de itens.</p>
+
+                                        <sectiom class="row g-2">
+                                            <a href="" class="btn" id="primeiros-botoes" data-bs-toggle="modal"
+                                                data-bs-target="#modalCreate">Create</a>
+                                            <a href="" class="btn" id="segundos-botoes">Salvar</a>
+                                            <a href="" class="btn btn-maiseu text-light">Post</a>
+                                        </sectiom>
+
+                                    </section>
+                                </section>
+                            </section>
+
+
+                            <section class="col-12 col-lg-6">
+                                <section class="card">
+                                    <section class="card-body bg-crud">
+                                        <i class="bi bi-binoculars-fill"></i>
+                                        <h5 class="card-title titulo">Read - Get</h5>
+                                        <p class="card-text">Visualização dos itens.</p>
+
+                                        <section class="row g-2">
+                                            <a href="" class="btn" id="primeiros-botoes" data-bs-toggle="modal" 
+                                             data-bs-target="#modalVisualizacao">Read</a>
+                                            <a href="" class="btn" id="segundos-botoes">Exibir</a>
+                                            <a href="" class="btn btn-maiseu text-light">Get</a>
+                                        </section>
+
+                                    </section>
+                                </section>
+                            </section>
+
+                            <section class="col-12 col-lg-6">
+                                <section class="card">
+                                    <section class="card-body bg-crud">
+                                        <i class="bi bi-pencil-square"></i>
+                                        <h5 class="card-title titulo">Update - Put</h5>
+                                        <p class="card-text">Atualização dos itens.</p>
+
+                                        <section class="row g-2">
+                                            <a href="" class="btn" id="primeiros-botoes">Update</a>
+                                            <a href="" class="btn" id="segundos-botoes">Alterar</a>
+                                            <a href="" class="btn btn-maiseu text-light">Put</a>
+                                        </section>
+
+                                    </section>
+                                </section>
+                            </section>
+
+                            <section class="col-12 col-lg-6">
+                                <section class="card">
+                                    <section class="card-body bg-crud">
+                                        <i class="bi bi-trash3-fill "></i>
+                                        <h5 class="card-title titulo">Delete - Delete</h5>
+                                        <p class="card-text">Exclusão de itens.</p>
+
+                                        <section class="row g-2">
+                                            <a href="" class="btn" id="primeiros-botoes">Delete</a>
+                                            <a href="" class="btn" id="segundos-botoes">Excluir</a>
+                                            <a href="" class="btn btn-maiseu text-light">Delete</a>
+                                        </section>
+
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+
+                </section>
+
+                <section class="col-12 col-lg-6">
+                    <!-- Início do slider -->
+                    <section class="container" id="container-carousel">
+                        <section class="carousel slide" id="slider" data-bs-ride="carousel" data-bs-interval="1000">
+                            <section class="carousel-indicators">
+
+                                <button type="button" class="active" data-bs-target="#slider" data-bs-slide-to="0"
+                                    aria-current="true" aria-label="Slide 1"></button>
+
+                                <button type="button" data-bs-target="#slider" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+
+                                <button type="button" data-bs-target="#slider" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+
+                            </section>
+
+                            <section class="carousel-inner">
+
+                                <section class="carousel-item active">
+                                    <img class="d-block w-100" src="images/comida 1.jpg" alt="">
+                                    <section class="carousel-caption">
+                                        <h4>Imagem 1</h4>
+                                        <a href="" class="btn btn-primary">Veja além</a>
+                                    </section>
+                                </section>
+
+                                <section class="carousel-item">
+                                    <img class="d-block w-100" src="images/comida 2.jpg" alt="">
+                                    <section class="carousel-caption">
+                                        <h4>Imagem 2</h4>
+                                        <a href="" class="btn btn-primary">Veja além</a>
+                                    </section>
+                                </section>
+
+                                <section class="carousel-item">
+                                    <img class="d-block w-100" src="images/imagem 3.jpg" alt="">
+                                    <section class="carousel-caption">
+                                        <h4>Imagem 3</h4>
+                                        <a href="" class="btn btn-primary">Veja além</a>
+                                    </section>
+                                </section>
+
+                            </section>
+                        </section>
+                        <!-- Fim do slider -->
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <!-- Inclusão do Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Meu JS -->
+    <script src="js/armagedon.js"></script>
+</body>
+
+<!-- Modal -->
+<section class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <section class="modal-dialog modal-dialog-centered modal-lg">
+        <section class="modal-content">
+            <section class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </section>
+            <section class="modal-body">
+                <form class="row g-3">
+                    <div class="col-auto">
+                      <label for="inputEmail4" id="entrada" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="digite seu email">
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="inputPassword4" class="form-label">Senha</label>
+                      <input type="password" class="form-control" id="inputPassword4" placeholder="digite sua senha">
+                    </div>
+
+                   <div class="col-12">
+                      <label for="inputAddress" class="form-label">Nome</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="digite seu nome">
+                    </div>
+
+                    <div class="col-12">
+                      <label for="inputAddress2" class="form-label">Sobrenome</label>
+                      <input type="text" class="form-control" id="inputAddress2" placeholder="digite seu sobrenome">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputCity" class="form-label">Cidade</label>
+                      <input type="text" class="form-control" id="inputCity" placeholder="digite sua cidade">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Estado</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Selecione</option>
+                        <option value="">AC</option>
+                        <option value="">AL</option>
+                        <option value="">AP</option>
+                        <option value="">AM</option>
+                        <option value="">BA</option>
+                        <option value="">CE</option>
+                        <option value="">DF</option>
+                        <option value="">ES</option>
+                        <option value="">GO</option>
+                        <option value="">MA</option>
+                        <option value="">MT</option>
+                        <option value="">MS</option>
+                        <option value="">MG</option>
+                        <option value="">PA</option>
+                        <option value="">PB</option>
+                        <option value="">PR</option>
+                        <option value="">PE</option>
+                        <option value="">PI</option>
+                        <option value="">RJ</option>
+                        <option value="">RN</option>
+                        <option value="">RS</option>
+                        <option value="">RO</option>
+                        <option value="">RR</option>
+                        <option value="">SC</option>
+                        <option value="">SP</option>
+                        <option value="">SE</option>
+                        <option value="">TO</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <label class="form-check-label" for="gridCheck">
+                            Concordo que este site pode salvar minhas informações
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                      </div>
+                    </form>
+
+            </section>
+            <section class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </section>
+        </section>
+    </section>
+</section>
+
+<!--2 modal-->
+
+<section class="modal fade" id="modalVisualizacao" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <section class="modal-dialog modal-dialog-centered modal-lg">
+        <section class="modal-content">
+            <section class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </section>
+            <section class="modal-body">
+
+                    <table class="table table-striped">
+                    <tr>
+                        <th>Company</th>
+                        <th>Contact</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <td>Alfreds Futterkiste</td>
+                        <td>Maria Anders</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <td>Berglunds snabbköp</td>
+                        <td>Christina Berglund</td>
+                        <td>Sweden</td>
+                    </tr>
+                    <tr>
+                        <td>Centro comercial Moctezuma</td>
+                        <td>Francisco Chang</td>
+                        <td>Mexico</td>
+                    </tr>
+                    <tr>
+                        <td>Ernst Handel</td>
+                        <td>Roland Mendel</td>
+                        <td>Austria</td>
+                    </tr>
+                    <tr>
+                        <td>Island Trading</td>
+                        <td>Helen Bennett</td>
+                        <td>UK</td>
+                    </tr>
+                    <tr>
+                        <td>Königlich Essen</td>
+                        <td>Philip Cramer</td>
+                        <td>Germany</td>
+                    </tr>
+                    <tr>
+                        <td>Laughing Bacchus Winecellars</td>
+                        <td>Yoshi Tannamuri</td>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <td>Magazzini Alimentari Riuniti</td>
+                        <td>Giovanni Rovelli</td>
+                        <td>Italy</td>
+                    </tr>
+                    <tr>
+                        <td>North/South</td>
+                        <td>Simon Crowther</td>
+                        <td>UK</td>
+                    </tr>
+                    <tr>
+                        <td>Paris spécialités</td>
+                        <td>Marie Bertrand</td>
+                        <td>France</td>
+                    </tr>
+                    </table>
+    </section>
+</section>
+
+</html>
